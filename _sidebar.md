@@ -5,6 +5,6 @@
 
 - [Setup](setup)
     - [Conda Cheat Sheet](conda-cheat-sheet)
-- [Verson Control (Git)](Version Control (Git))
+- [Verson Control (Git)](Version-Control-(Git))
     - [Git Cheat Sheet](git-cheat-sheet)
 
