@@ -1,5 +1,3 @@
-# Knowledge Database
-
 This is the general knowledge database, relevant for all repositorys within the rise-iea organization on GitHub. It contains general information about the project structure, setup, and version control. For more specific information about the individual repositorys, see the README.md file (documentation) in the respective repository. This can be also linked to in other projects, for more general information. 
 
 ## Content
