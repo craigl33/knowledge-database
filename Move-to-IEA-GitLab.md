@@ -8,8 +8,8 @@ For the switch to the iea gitlab, two things are needed:
 - `git remote add origin <repo_url>`
 
 And the repo_url is one of:
-- https://gitlab.iea.org/rise/gis-script
-- https://gitlab.iea.org/rise/knowledge-database
-- https://gitlab.iea.org/rise/phase-classification
-- https://gitlab.iea.org/rise/riselib
-- https://gitlab.iea.org/rise/solution-file-processing
+- https://gitlab.iea.org/iea/ems/rise/gis-script
+- https://gitlab.iea.org/iea/ems/rise/knowledge-database
+- https://gitlab.iea.org/iea/ems/rise/phase-classification
+- https://gitlab.iea.org/iea/ems/rise/riselib
+- https://gitlab.iea.org/iea/ems/rise/solution-file-processing
