@@ -1,4 +1,4 @@
-<- [Home](https://gitlab.iea.org/rise/knowledge-database/-/wikis/home)
+<- [Home](home)
 
 This is a general guide into using the version control system git. It is not meant to be a complete guide, but rather a short introduction into the logic behind git and version control. For more details see the [git documentation](https://git-scm.com/docs).
 
