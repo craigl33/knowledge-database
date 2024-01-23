@@ -1,4 +1,8 @@
-This is the general knowledge database, relevant for all repositorys within the rise-iea organization on GitHub. It contains general information about the project structure, setup, and version control. For more specific information about the individual repositorys, see the README.md file (documentation) in the respective repository. This can be also linked to in other projects, for more general information. 
+This is the general knowledge database, relevant for all repositorys within the rise-iea organization on GitHub. It contains general information about the project structure, setup, and version control. For more specific information about the individual repositorys, see the README.md file (documentation) in the respective repository. This can be also linked to in other projects, for more general information.
+
+Also see the [Get Started](https://python.iea.org/doc/getting-started/index.html) documentation from ISU, on general setup things (conda, gitlab, datawarehouse etc).
+Maybe even the [ieacore](https://python.iea.org/doc/ieacore/latest/) documentation, but right now the package is not relevant.
+
 
 ## Content
 - [Setup](Setup)
