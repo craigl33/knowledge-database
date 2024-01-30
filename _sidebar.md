@@ -7,5 +7,5 @@
     - [Conda Cheat Sheet](conda-cheat-sheet)
 - [Verson Control (Git)](Version-Control-(Git))
     - [Git Cheat Sheet](git-cheat-sheet)
-    - [Move to IEA GitLab](Move-to-IEA-GitLab)
+    - [Connect to GitLab](connect-to-GitLab)
 
