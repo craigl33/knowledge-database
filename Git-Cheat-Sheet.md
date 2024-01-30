@@ -13,6 +13,7 @@ or clone an existing repository (which does all three steps above at once)
 
     git clone <url> # clone an existing repository
 
+> Note: If you are doing this for the first time, you must authenticate yourself. See [here](connect-to-gitlab) on how to that.
 
 ## Basic commands
 
