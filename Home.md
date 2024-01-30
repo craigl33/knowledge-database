@@ -13,7 +13,7 @@ Maybe even the [ieacore](https://python.iea.org/doc/ieacore/latest/) documentati
   - General introduction to git, setup connection to GitHub, and most important commands
   - [Git Cheat Sheet](Git-Cheat-Sheet)
     - Important commands for fast reference
-  - [Move to IEA GitLab](Move-to-IEA-GitLab)
+  - [Connect to GitLab](Connect-to-GitLab)
     - Explanation how to move from GitHub to GitLab (could be deleted after a while)
 
 If any new information is added, please also add it to the content list above. This makes it easier to find relevant information.
