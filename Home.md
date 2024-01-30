@@ -14,7 +14,7 @@ Maybe even the [ieacore](https://python.iea.org/doc/ieacore/latest/) documentati
   - [Git Cheat Sheet](Git-Cheat-Sheet)
     - Important commands for fast reference
   - [Connect to GitLab](Connect-to-GitLab)
-    - Explanation how to move from GitHub to GitLab (could be deleted after a while)
+    - Setup GitLab to local machine connection, when using the first time
 
 If any new information is added, please also add it to the content list above. This makes it easier to find relevant information.
 
