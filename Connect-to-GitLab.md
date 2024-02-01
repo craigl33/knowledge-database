@@ -3,7 +3,7 @@
 ## Initial GitLab connection
 To access the GitLab WebApp, Single-Sign-in can be used via Windows. Just as if you were accessing the intranet or Office 365. That probably also worked, otherwise you would not see this page.
 
-However, it does not work to establish a local connection to a repo. For this you can either use SSH keys or your own GitLab password. The second option is the easier one. Own GitLab password just means you set a password for GitLab, and this one will work for authentification. Your Windows password will never work.
+However, it does not work to establish a local connection to a repo. For this you can either use SSH keys or your own GitLab password. How to setup SSH keys is described [here](https://python.iea.org/doc/getting-started/doc-gitlab-iea/sdlc.html#gitlab-on-premise-at-the-iea) by ISU. However, the second option is the easier one. Own GitLab password just means you set a password for GitLab, and this one will work for authentification. Your Windows password will never work.
 
 Then you can use your email (e.g. lukas.trippe@iea.org) and the password you set when git asks you for it. So with the first `git clone` command. This authentication only needs to happen once.
 
