@@ -32,14 +32,14 @@ Activate an environment:
 
 ## Update conda
 
-Conda is installed from the Software Center with an very outdated version. Updating this to the latest version can be a bit tricky the first time, since many depencency conflicts have to be resolved. The normal update all commands, do not solve them then might just do not update anything at all. 
+There was sometimes the problem that Conda in the Software Center was a very old version (from 07/2020 or 4.8.3). It was possible to update this yourself, but it could lead to many dependency conflicts that Conda itself could not solve. Before you try this (described below), first write to IT to see if they can provide a new version for you. For some reason this happens on a per user basis.
 
-To solve this specify the version number of conda to update to. Checkout the latest version number in the [conda changelog](https://github.com/rise-iea/knowledge-database/edit/main/Conda-Cheat-Sheet.md) and then run the steps below. If errors occur, first run the commands in the troubleshooting section below. If this still not works, check your current version with `conda -V` and try to update step by step with version numbers which are not too far apart. On a yearly basis should be fine. Do this until you reach the latest version.
+If you need to update conda yourself (better to solve that with IT), specify the version number of conda to update to. Checkout the latest version number in the [conda changelog](https://docs.conda.io/projects/conda/en/latest/release-notes.html) and then run the steps below. If errors occur, first run the commands in the troubleshooting section below. If this still not works, check your current version with `conda -V` and try to update step by step with version numbers which are not too far apart. On a yearly basis should be fine. Do this until you reach the latest version.
 
     conda install -n base conda==<version_number>
     conda update -n base --all 
 
-When you reached the latest version, the next updates form here should be fine. This is just an issue with the very old version from the Software Center. Right now the version 4.8.3 is installed.
+When you reached the latest version, the next updates form here should be fine. This is just an issue with the very old version from the Software Center.
 
 ### Update environment packages
 
@@ -79,5 +79,4 @@ Or you can set it as the default solver:
 
     conda config --set solver libmamba
 
-In general mamba is a much better alternative to conda. But right now it is not recommended to use it on top of the default conda installation. And it is not available in the Software Center right now
-
+In general mamba is a much better alternative to conda. But right now it is not recommended to use it on top of the default conda installation. And it is not available in the Software Center at the moment.
