@@ -13,7 +13,7 @@ Managing environments:
     conda create --name <env_name>
     conda env create -f environment.yml # From a file
     conda create --name <env_name> --file environment.yml # From a file with a specific name 
-    conda create --name <env_name> python=3.8 # With a specific python version
+    conda create --name <env_name> python=3.11 # With a specific python version
     # Delete an environment
     conda env remove --name <env_name> # remove an environment
 
