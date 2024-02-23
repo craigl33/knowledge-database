@@ -1,4 +1,4 @@
-<- [Home](home)
+<- [Home](home.md)
 
 Another cheat sheet for conda can be found [here](https://conda.io/projects/conda/en/latest/user-guide/cheatsheet.html). And the full conda documentation [here](https://docs.conda.io/projects/conda/en/latest/index.html).
 

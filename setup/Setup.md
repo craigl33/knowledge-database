@@ -1,4 +1,4 @@
-<- [Home](home)
+<- [Home](home.md)
 
 Here is a short overview on how to set up everything and install the necessary packages. At the end is also a troubleshooting section.
 

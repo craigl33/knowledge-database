@@ -5,19 +5,19 @@ Maybe even the [ieacore](https://python.iea.org/doc/ieacore/latest/) documentati
 
 
 ## Content
-- [Home](Home)
+- [Home](home.md)
 - Best Practises
-  - [Code-Quality](best-practices/Code-Quality)
+  - [Code-Quality](best-practices/Code-Quality.md)
     - Infos on code quality, style guides and why you need to setup a linter
-- [Version Control (Git)](Version-Control-(Git))
+- [Version Control (Git)](git/Version-Control-(Git).md)
   - General introduction to git, setup connection to GitHub, and most important commands
-  - [Git Cheat Sheet](Git-Cheat-Sheet)
+  - [Git Cheat Sheet](git/Git-Cheat-Sheet.md)
     - Important commands for fast reference
-  - [Connect to GitLab](Connect-to-GitLab)
+  - [Connect to GitLab](git/Connect-to-GitLab.md)
     - Setup GitLab to local machine connection, when using the first time
-- [Setup](Setup)
+- [Setup](setup/Setup.md)
   - Install packages and setup project folder, IDE, and virtual environment
-  - [Conda Cheat Sheet](Conda-Cheat-Sheet)
+  - [Conda Cheat Sheet](setup/Conda-Cheat-Sheet.md)
     - Important commands for fast reference
 
 If any new information is added, please also add it to the content list above. This makes it easier to find relevant information.
