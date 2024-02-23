@@ -1,4 +1,4 @@
-<- [Home](home.md)
+<- [Home](home)
 
 Another cheat sheet for git can be found [here](https://education.github.com/git-cheat-sheet-education.pdf). And the full git documentation [here](https://git-scm.com/doc).
 

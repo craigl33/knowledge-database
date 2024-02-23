@@ -1,4 +1,4 @@
-<- [Home](home.md)
+<- [Home](home)
 
 ## Initial GitLab connection
 To access the GitLab WebApp, Single-Sign-in can be used via Windows. Just as if you were accessing the intranet or Office 365. That probably also worked, otherwise you would not see this page.

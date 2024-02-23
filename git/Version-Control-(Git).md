@@ -1,8 +1,8 @@
-<- [Home](home.md)
+<- [Home](home)
 
 This is a general guide into using the version control system git. It is not meant to be a complete guide, but rather a short introduction into the logic behind git and version control. For more details see the [git documentation](https://git-scm.com/docs).
 
-The most important commands are listed [here](Git-Cheat-Sheet.md).
+The most important commands are listed [here](Git-Cheat-Sheet).
 
 ## Why use version control?
 Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. This is very useful for individual development, but even more so for collaborative development. It allows you to work on the same code base without interfering with each other. And any changes are tracked and can be reverted if necessary. Version control normally refers to a system called git, which is the most popular version control system and also used here.
@@ -21,7 +21,7 @@ Once installed you can set some global settings. This only has to be done once. 
 
 
 ### Initialize local repository
-A git repository is the folder where all files are stored and tracked. This is why having a single project folder (like described in the [setup guide](Setup.md)) is important. To initialize a git repository, open a terminal in the project folder and type `git init`. This creates a hidden folder called `.git` in the project folder. This folder contains all the information about the repository and should not be deleted or changed manually. But you also never have to touch it. 
+A git repository is the folder where all files are stored and tracked. This is why having a single project folder (like described in the [setup guide](Setup)) is important. To initialize a git repository, open a terminal in the project folder and type `git init`. This creates a hidden folder called `.git` in the project folder. This folder contains all the information about the repository and should not be deleted or changed manually. But you also never have to touch it. 
 
  The command `git init` is only initializing a new local repository, the remote connection and the data exchange is still missing (see below). To do that all at once with an existing repository, you can use `git clone <url>`. It creates a new folder with the name of the repository, copies all files from the remote repository into it als also initializes a local repository with a remote connection. This is the most common way to do the setup.
 
@@ -38,7 +38,7 @@ Since this is a private repository, you need to be added as a collaborator first
 Now you have a local repository connected to a remote repository. You can now start to use git.
 
 ## Using git
-This is mainly an explanation. The most important commands are listed [here](Git-Cheat-Sheet.md).
+This is mainly an explanation. The most important commands are listed [here](Git-Cheat-Sheet).
 
 Git is a command-line tool, but there are also many graphical user interfaces (GUIs) available. For example, PyCharm has a built-in git GUI. But for this guide, we will only use the command-line interface. I personally would advise against using a GUI, since it is easier to learn the commands and you have more control over what you are actually doing. So the chance of messing something up is smaller. But it is up to you.
 

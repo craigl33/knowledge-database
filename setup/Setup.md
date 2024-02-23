@@ -1,4 +1,4 @@
-<- [Home](home.md)
+<- [Home](home)
 
 Here is a short overview on how to set up everything and install the necessary packages. At the end is also a troubleshooting section.
 
@@ -13,7 +13,7 @@ Every setup process starts with the project folder. It is a dedicated directory 
 - Encourages good and up-to-date documentation practices (Write code and documentation in the same project/ editor).
 - ...
 
-When creating a new project folder, you can simply copy all files from the source or even better use version control (see here: [git](Version-Control.md)).
+When creating a new project folder, you can simply copy all files from the source or even better use version control (see here: [git](Version-Control)).
 
 
 ## Integrated Development Environment (IDE)
@@ -67,7 +67,7 @@ If a conda environment is set up you activate it with `conda activate <env_name>
 
 
 ### Install dependencies
-In the documentation/ README.md file of each repository should be a list of all dependencies and documented how to install them.
+In the documentation/ README file of each repository should be a list of all dependencies and documented how to install them.
 
 In general there are some IEA specific things to to be aware off:
 
@@ -102,5 +102,5 @@ To create a new `environment.yml` file, activate your environment and run:
 
 Since the file is also included in git, you see all changes in the file and which packages have been added, updated or removed.
 
-Of course before that, the actual dependencies have to be updated and it is also recommended to run the code to see if everything still works or adjust it if necessary. When updating to a new Python version it is the easiest to create a new environment and install all dependencies from scratch See more in the [Conda Cheat Sheet](Conda-Cheat-Sheet.md) section.
+Of course before that, the actual dependencies have to be updated and it is also recommended to run the code to see if everything still works or adjust it if necessary. When updating to a new Python version it is the easiest to create a new environment and install all dependencies from scratch See more in the [Conda Cheat Sheet](Conda-Cheat-Sheet) section.
 

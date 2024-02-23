@@ -1,3 +1,3 @@
-<- [Home](home.md)
+<- [Home](home)
 
 tbd

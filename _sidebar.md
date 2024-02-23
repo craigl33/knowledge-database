@@ -1,12 +1,12 @@
-- [Home](home.md)
-- [Sidebar](_sidebar.md)
+- [Home](home)
+- [Sidebar](_sidebar)
 
 ---
 
 - Best Practises
-  - [Code-Quality](best-practices/Code-Quality.md)
-- [Version Control (Git)](git/Version-Control-(Git).md)
-  - [Git Cheat Sheet](git/Git-Cheat-Sheet.md)
-  - [Connect to GitLab](git/Connect-to-GitLab.md)
-- [Setup](setup/Setup.md)
-  - [Conda Cheat Sheet](setup/Conda-Cheat-Sheet.md)
+  - [Code-Quality](best-practices/Code-Quality)
+- [Version Control (Git)](git/Version-Control-(Git))
+  - [Git Cheat Sheet](git/Git-Cheat-Sheet)
+  - [Connect to GitLab](git/Connect-to-GitLab)
+- [Setup](setup/Setup)
+  - [Conda Cheat Sheet](setup/Conda-Cheat-Sheet)
