@@ -1,6 +1,6 @@
 <- [Home](home)
 
-This is a general guide into using the version control system git. It is not meant to be a complete guide, but rather a short introduction into the logic behind git and version control. For more details see the [git documentation](https://git-scm.com/docs).
+This is a general guide into using the version control system git. It is not meant to be a complete guide, but rather a short introduction into the logic behind git and version control. For more details see the [git documentation](https://git-scm.com/docs). Also there is a video series [here](https://www.youtube.com/watch?v=3RjQznt-8kE&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR). ISU also provides some informations [here](https://python.iea.org/doc/getting-started/doc-gitlab-iea/sdlc.html#gitlab-on-premise-at-the-iea). 
 
 The most important commands are listed [here](Git-Cheat-Sheet).
 

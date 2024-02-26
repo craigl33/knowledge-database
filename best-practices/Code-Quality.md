@@ -1,6 +1,6 @@
 <- [Home](home)
 
-To ensure everybody can read and understand the code, it is important to follow some guidelines. This includes the use of a linter and formatter, to enforce a consistent style and to catch errors early.
+To ensure everybody can read and understand the code, it is important to follow some guidelines. This includes the use of a linter and formatter, to enforce a consistent style and to catch errors early. General good overview in the topic is given [here](https://realpython.com/python-code-quality/).
 
 ## Linter & Formatter
 A linter is a tool that analyzes code and flags programming errors, bugs, stylistic errors, and suspicious constructs.
@@ -54,3 +54,11 @@ It is also possible to run it on jupyter notebooks. But those have to be explici
 
 ### Ruff settings
 Ruff can be configured on which rules to enforce and which not. This is done via the `pyproject.toml` file. All repositories already include a section for that. You can change it if you want to enforce different rules.
+
+## Jupyter Notebook clean up
+Git does not behave well with jupyter notebooks. There are different approaches (see [here](https://www.reviewnb.com/git-jupyter-notebook-ultimate-guide), but the easiest is to just clean up metadata before committing. If you still want to keep the output to show results and examples via Gitlab, you can use the `nbstripout` tool:
+```bash
+pip install nbstripout
+nbstripout <file>.ipynb # To clean metadata and output
+nbstripout <file>.ipynb --keep-output # To clean only metadata
+```
