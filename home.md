@@ -6,7 +6,7 @@ Maybe even the [ieacore](https://python.iea.org/doc/ieacore/latest/) documentati
 
 ## Content
 - [Home](home)
-- [Coding best practice](Coding-best-practice) (code quality, linter)
+- [Coding best practice](best-practices/Coding-best-practice) (code quality, linter)
 - [Version Control (Git)](git/Version-Control-(Git)) (general intro to git)
   - [**First-time connection to GitLab**](git/Version-Control-(Git)#initial-gitlab-connection)
   - [Git Cheat Sheet](git/Git-Cheat-Sheet) (useful commands for quick reference)
