@@ -6,15 +6,12 @@ Maybe even the [ieacore](https://python.iea.org/doc/ieacore/latest/) documentati
 
 ## Content
 - [Home](home)
-- Best Practises
-  - [Code-Quality](best-practices/Code-Quality)
-    - Infos on code quality, style guides and why you need to setup a linter
-- [Version Control (Git)](git/Version-Control-(Git))
-  - General introduction to git, setup connection to GitHub, and most important commands
-  - [Git Cheat Sheet](git/Git-Cheat-Sheet)
-    - Important commands for fast reference
-  - [Connect to GitLab](git/Connect-to-GitLab)
-    - Setup GitLab to local machine connection, when using the first time
+- [Coding best practice](Coding-best-practice) (code quality, linter)
+- [Version Control (Git)](git/Version-Control-(Git)) (general intro to git)
+  - [**First-time connection to GitLab**](git/Version-Control-(Git)#initial-gitlab-connection)
+  - [Git Cheat Sheet](git/Git-Cheat-Sheet) (useful commands for quick reference)
+  - [Move from GitHub to GitLab](git/Move-from-GitHub-to-GitLab)
+    - Update an existing connection if a GitHub repository has been migrated to GitLab
 - [Setup](setup/Setup)
   - Install packages and setup project folder, IDE, and virtual environment
   - [Conda Cheat Sheet](setup/Conda-Cheat-Sheet)
