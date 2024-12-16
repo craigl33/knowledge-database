@@ -1,41 +1,38 @@
 <- [Home](home)
 
-This is a general guide into using the version control system git. It is not meant to be a complete guide, but rather a short introduction into the logic behind git and version control. For more details see the [git documentation](https://git-scm.com/docs). Also there is a video series [here](https://www.youtube.com/watch?v=3RjQznt-8kE&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR). ISU also provides some informations [here](https://python.iea.org/doc/getting-started/doc-gitlab-iea/sdlc.html#gitlab-on-premise-at-the-iea). 
+This is a general guide into using the version control system git. It is not meant to be a complete guide, but rather a short introduction into the logic behind git and version control. For more details see the [git documentation](https://git-scm.com/docs). Also there is a video series [here](https://www.youtube.com/watch?v=3RjQznt-8kE&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR). ISU also provides some information [here](https://python.iea.org/doc/getting-started/doc-gitlab-iea/sdlc.html#gitlab-on-premise-at-the-iea). 
 
 The most important commands are listed [here](Git-Cheat-Sheet).
 
 ## Why use version control?
-Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. This is very useful for individual development, but even more so for collaborative development. It allows you to work on the same code base without interfering with each other. And any changes are tracked and can be reverted if necessary. Version control normally refers to a system called git, which is the most popular version control system and also used here.
+Version control is the practice of recording changes to a file or set of files over time so that you can recall specific versions later. This is very useful for individual development, but even more so for collaborative development. It allows you to work on the same code base without interfering with each other. And any changes are tracked and can be reverted if necessary. Version control normally refers to a system called git, which is the most popular version control system and also used here.
 
 ## Setup
-Git is a distributed version control system, which means that the complete repository is copied to your local machine. If collaboration is not necessary, you can simply use git locally and have some benefits without the need for a remote repository. For collaboration, you need a remote repository. The most popular one is GitHub, but there are also other options like GitLab or Bitbucket and you can also self-host a git server. For this project, we use GitHub.
+Git is a distributed version control system, which means that the complete repository is copied to your local machine. A git repository is the folder where all files are stored and tracked. This is why having a single project folder is important. If collaboration is not necessary, you can simply use git locally and have some benefits without the need for a remote repository. For collaboration, you need a remote repository. The most popular one is GitHub, but there are also other options like GitLab or Bitbucket and you can also self-host a git server. The IEA/RISE uses GitLab which is similar to GitHub but allows the IEA to host on an internal server (I think).
 
 ### Install git
 Git needs to be installed on the local machine. At IEA this can be done via the Software Center. To check if git is installed, open a terminal and type `git --version`.
 
 ### Global settings
-Once installed you can set some global settings. This only has to be done once. There are many settings, but the only one you have to set is the username and email address. This is used to identify the person who made a commit. Just use the email address as for your GitHub account. The name can be anything, so far the convention is to use your first and last name.
+Once installed you can set some global settings. This only has to be done once. There are many settings, but the only one you have to set is the username and email address. This is used to identify the person who made a commit. Just use the email address as for your GitLab account. The name can be anything, so far the convention is to use your first and last name.
 
     git config --global user.name "Your Name"
     git config --global user.email "Your Email"
 
+### Initial GitLab connection
+The GitLab web application can be accessed using Single Sign On on Windows, just like the intranet or Office 365. Presumably that has worked if you have reached this page.
 
-### Initialize local repository
-A git repository is the folder where all files are stored and tracked. This is why having a single project folder (like described in the [setup guide](Setup)) is important. To initialize a git repository, open a terminal in the project folder and type `git init`. This creates a hidden folder called `.git` in the project folder. This folder contains all the information about the repository and should not be deleted or changed manually. But you also never have to touch it. 
+However, connections to GitLab repositories cannot be established using SSO, either SSH keys or HTTPS must be used. IT recommends that we connect using SSH keys, not HTTPS. Set up an SSH key as described [here](https://python.iea.org/doc/getting-started/doc-gitlab-iea/sdlc.html#gitlab-on-premise-at-the-iea) by ISU, though beware: use the command `ssh-keygen -t rsa` instead of `ssh-keygen`. Ensure you have an SSH key set up on each machine (laptop and each VM).
 
- The command `git init` is only initializing a new local repository, the remote connection and the data exchange is still missing (see below). To do that all at once with an existing repository, you can use `git clone <url>`. It creates a new folder with the name of the repository, copies all files from the remote repository into it als also initializes a local repository with a remote connection. This is the most common way to do the setup.
+Once the SSH key is set up, go to the GitLab project web page and find the SSH URL from the blue `Code` dropdown button at the top, e.g. for `plexos-model-setup` the SSH URL is `git@gitlab.iea.org:iea/ems/rise/plexos-model-setup.git`. Use this URL in the git command `git remote add origin <repo_url>` on your machine/VM, e.g. `git remote add origin git@gitlab.iea.org:iea/ems/rise/plexos-model-setup.git`.
+
+`origin` is the name of the remote repository. You can choose any name you want, but `origin` is the standard name. And in most cases, you only have one remote repository, so just stick with `origin`.
 
 
-### Connect to remote repository
-For individual use you can now start to use git with the commands below. But for collaboration, you need to connect to a remote repository. This is done by creating a repository on GitHub and then connecting the local repository to the remote one. The documentation you read right now is also just an existing repostiroy on GitHub. To connect to it, you run:
+### Initialise a local repository
+You may also want to initialise a local git repository. To do so, open a terminal in the project folder and type `git init`. This creates a hidden folder called `.git` in the project folder. This folder contains all the information about the repository and should not be deleted or changed manually. But you also never have to touch it. 
 
-    git remote add origin https://github.com/rise-iea/knowledge-database.git
-
-`origin` is the name of the remote repository. You can choose any name you want, but `origin` is the standard name. And in most cases, you only have one remote repository, so just stay with `origin`.
-
-Since this is a private repository, you need to be added as a collaborator first. When accessing the repository for the first time, you need to authenticate yourself. Normally just a browser opens and you can log in with your GitHub account. If this does not work you have to use a personal access token (see [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) for more details).
-
-Now you have a local repository connected to a remote repository. You can now start to use git.
+ The command `git init` is only initializing a new local repository, the remote connection and the data exchange is still missing (see below). To do that all at once with an existing repository, you can use `git clone <url>`. It creates a new local folder with the name of the repository, copies all files from the remote repository into it and also initialises a local repository with a remote connection. This is the most common way to do the setup.
 
 ## Using git
 This is mainly an explanation. The most important commands are listed [here](Git-Cheat-Sheet).
