@@ -4,18 +4,32 @@ Also see the [Get Started](https://python.iea.org/doc/getting-started/index.html
 Maybe even the [ieacore](https://python.iea.org/doc/ieacore/latest/) documentation, but right now the package is not relevant.
 
 
-## Content
-- [Home](home)
-- [Coding best practice](best-practices/Coding-best-practice) (code quality, linter)
-- [Version Control (Git)](git/Version-Control-(Git)) (general intro to git)
-  - [**First-time connection to GitLab**](git/Version-Control-(Git)#initial-gitlab-connection)
-  - [Git Cheat Sheet](git/Git-Cheat-Sheet) (useful commands for quick reference)
-  - [Move from GitHub to GitLab](git/Move-from-GitHub-to-GitLab)
-    - Update an existing connection if a GitHub repository has been migrated to GitLab
-- [Setup](setup/Setup)
-  - Install packages and setup project folder, IDE, and virtual environment
-  - [Conda Cheat Sheet](setup/Conda-Cheat-Sheet)
-    - Important commands for fast reference
+# Wiki contents
+- [Home (this page)](home)
+
+## GitLab, coding
+- [Coding best practice](Coding-best-practice) (code quality, linter)
+- [Python setup](/Python-setup) (install packages, IDE, virtual env, set up project folders)
+- [Conda Cheat Sheet](/Conda-Cheat-Sheet)
+- [Version Control (Git)](Version-Control-(Git)) (general intro to git)
+  - [**First-time connection to GitLab**](Version-Control-(Git)#initial-gitlab-connection)
+  - [Git Cheat Sheet](Git-Cheat-Sheet)
+  - [Move a repo from GitHub to GitLab](Move-a-repo-from-GitHub-to-GitLab)
+
+
+## RISE models
+
+- [Ukraine](/Ukraine model)
+- [China](/China model)
+- [Korea](/Korea model)
+- [India](/India model)
+- [Gujarat, India](/Gujarat, India model)
+- [Indonesia](/Indonesia model)
+- [Thailand](/Thailand model)
+
+
+
 
 If any new information is added, please also add it to the content list above. This makes it easier to find relevant information.
+
 
