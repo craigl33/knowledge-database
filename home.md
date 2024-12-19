@@ -4,7 +4,7 @@ Also see the [Get Started](https://python.iea.org/doc/getting-started/index.html
 Maybe even the [ieacore](https://python.iea.org/doc/ieacore/latest/) documentation, but right now the package is not relevant.
 
 
-# Wiki contents
+# Wiki
 - [Home (this page)](home)
 
 ## GitLab, coding
@@ -17,15 +17,21 @@ Maybe even the [ieacore](https://python.iea.org/doc/ieacore/latest/) documentati
   - [Move a repo from GitHub to GitLab](Move-a-repo-from-GitHub-to-GitLab)
 
 
-## RISE models
+## RISE modelling
 
-- [Ukraine](/Ukraine model)
-- [China](/China model)
-- [Korea](/Korea model)
-- [India](/India model)
-- [Gujarat, India](/Gujarat, India model)
-- [Indonesia](/Indonesia model)
-- [Thailand](/Thailand model)
+### Guidance
+- [Getting started](/Getting-started)
+- [Modelling overview](/Modelling-overview)
+- [Procedure summaries for modellers](/Procedure-summaries-for-modellers)
+
+### Models
+- [Ukraine](/Ukraine-model)
+- [China](/China-model)
+- [Korea](/Korea-model)
+- [India](/India-model)
+- [Gujarat, India](/Gujarat,-India-model)
+- [Indonesia](/Indonesia-model)
+- [Thailand](/Thailand-model)
 
 
 
