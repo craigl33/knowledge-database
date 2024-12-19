@@ -21,6 +21,36 @@ Note that we have recently updated the architecture of a lot of the scripts rela
   - In copy for demand: Anthony Vautrin
 
 
+**Virtual Private Network (VPN) access**
+
+When not in the office, connect to the VPN to access virtual machines, network drives and internal OECD sites (e.g. Kiosk). BI-IP Edge Client should come installed on IEA laptops. Open it, click Connect and on the window below enter:
+1.  Username: follows the pattern LASTNAME_F where F is the initial of
+    the user's first name. Not case sensitive
+2.  Windows password: normal Windows password used to log onto IEA
+    computers
+3.  RSA Passcode: the passcode shown in the RSA app (ie not your RSA
+    pin). IT Helpdesk knowledge articles for [requesting an RSA
+    token](https://helpdesk.iea.org/helpdesk/KB/View/2326-rsa-securid--request-a-token)
+    and [info on how the RSA app
+    works](https://helpdesk.iea.org/helpdesk/KB/View/679-rsa-securid--modern-token)  
+     
+
+
+**Virtual machine (VM)**
+
+A virtual machine needs to be set up/assigned to you by IT. Request from
+IT either by email (IT.Support@iea.org) or by [IT Helpdesk
+ticket](https://helpdesk.iea.org/helpdesk/). For people running python
+scripts to process model results, it is worth asking for 128GB of RAM as
+the default 16GB is not enough/slow for some operations.
+
+Once assigned, access using the VM Horizon Client software that comes
+installed on IEA laptops by default. Use the following guide to access
+the VM:
+<https://helpdesk.iea.org/helpdesk/KB/View/307-remote-access--virtual-machine>
+
+ 
+
 **Installing python**
 
 Most RISE code exists in python, with a few scripts in R and some python
@@ -32,34 +62,7 @@ solution files from PLEXOS.
 To get started you will need to install Anaconda Navigator from the
 software centre. If there is not a recent version (at least 2023.09,
 Python 3.11.5), you may need to request access to it from IT.
- 
 
-**Connecting to gitlab**
-
-The current RISE gitlab administrator who can provide permissions etc.
-is: Isaac Portugal
-
-RISE has its own [gitlab page
-here](https://gitlab.iea.org/iea/ems/rise). You should connect using the
-IEA SSO Registering and Login. The first time you connect you will need
-to setup a password that may be needed when you access gitlab through
-your scripts such as pull requests.
-
-The gitlab page contains all the code we use for [model
-setup](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup) and
-[solution file
-processing](https://gitlab.iea.org/iea/ems/rise/solution-file-processing)
-as well as a [knowledge
-database](https://gitlab.iea.org/iea/ems/rise/knowledge-database) with
-initial [setup
-instructions](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/setup/Setup)
-to get you started using python and git. The RISE gitlab administrator
-will need to give you permissions in order to make changes to the code
-on gitlab. Each of the project folders contains a readme that will guide
-you through getting that specific project working, which may require
-specific installations outside python such as julia.
-
- 
 
 **Using PLEXOS**
 
@@ -69,10 +72,6 @@ run models at any one time.
 - To change the named users we need to ask IT. The terms of our contract
   also require us to inform Energy Exemplar when we change the named
   users.
-- See [IT access VPN, VM,
-  PLEXOS](onenote:#IT%20access%20VPN,%20VM,%20PLEXOS&section-id={3A400C3C-8527-48C9-BAE1-A2C9F8CC2AD2}&page-id={57697526-7D8C-4233-B501-0D250D9EBD7E}&end&base-path=https://ieaorg.sharepoint.com/sites/EMS-RISE/SiteAssets/EMS-RISE%20Notebook/Onboarding%20and%20WIKI.one)
-  for instructions on accessing PLEXOS once installed, incl through a
-  VM.
 - We are able to access beginner PLEXOS training run by Energy Exemplar
   (now every month), which runs for 3 days. The modeller who is the main
   point of contact (currently Craig ) should email the case manager
@@ -85,6 +84,26 @@ run models at any one time.
   The material is quite extensive including recordings of the sessions,
   so the main limitation is the lack of a temporary PLEXOS licence and
   the inability to ask questions live.
+
+To access PLEXOS:
+1.  Download PLEXOS from the Software Centre
+2.  Request a licence from IT either by email (IT.Support@iea.org) or by
+    [IT Helpdesk ticket](https://helpdesk.iea.org/helpdesk/)
+3.  Connect to the VPN if not in the office
+4.  Open PLEXOS and attempt to log in using the authentication as below.
+    You will not be able to log in here but IT apparently needs you to
+    do this before they can see your account in the back end and assign
+    a licence to you
+5.  Once IT has confirmed the licence has been assigned, you will be
+    able to log in using the server and port below with Windows
+    authentication
+
+| Server: | vplxcon01.ad.iea.org |
+|---------|----------------------|
+| Port:   | 8888                 |
+
+
+
 
 
 
