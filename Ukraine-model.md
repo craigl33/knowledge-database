@@ -3,7 +3,7 @@
 [TOC]
 
 
-# **General China model background**
+# **General Ukraine model background**
 
 - **Regions**: A WEO-style model with originally 8 regions but which was
   updated/reported in 6 regions in recent updates (the underlying
