@@ -5,32 +5,19 @@
 
 # **General Ukraine model background**
 
-- **Regions**: A WEO-style model with originally 8 regions but which was
-  updated/reported in 6 regions in recent updates (the underlying
-  structure is still 8 but we aggregate). In the previous report
-  feedback it was noted that the central region is now separated so this
-  should ideally be updated in future and we need to identify clearly
-  that our modelling region aggregates these two regions.
-- **Scenarios**: the main scenario analysis revolves mainly around
-  sensitivities in the dispatching (full load hour allocations, or in
-  the past, 'fair dispatch') and in trade between regions (based largely
-  on flow constraints developed in the original model).
-- **Generation**: Capacities come from WEO data and regional capacity
-  splits were originally based on analysis by a consultant (Marco
-  Boroni) taking into account existing capacity and regional adequacy
-  considerations. These were subsequently updated (Net Zero Roadmap
-  analysis in 2021) with input from Dan Wetzel and taking into account
-  regional adequacy. These were not updated in the 2023 project but
-  should be updated at least to account for the year change (2035
-  to 2030) for the 2024 project.
-- **Demand**: The demand profile comes from the WEO, containing the
-  bottom up end use disaggregation. The regional demand disaggregation
-  was originally set up by a RISE \[SIR\] team member ([Yugo
-  Tanaka](file:///G:\DOCS\03%20PERSONAL\STAFF%20HAND%20OVER,%20etc\190730_Yugo))
-  in 2018 and for subsequent models the analysis was extrapolated or
-  interpolated to obtain the relevant year. Ideally this could be
-  updated with more recent base data but would be somewhat time
-  consuming.
+- **Regions**:  The model represents Ukraine in 8 different regions based on the Ukrenergo Power Zones/Regions. While this includes Crimea, this is excluded by default as Crimea has not been part of the Ukrainian IPS since 2014. In addition to Ukraine, the model also represents its European neighbours and their neighbours at a nationally aggregated level. This is important to capture export/import opportunities and costs.
+- ![image](uploads/4c99ea2fed4c7db20dfbdb5b8ff7895e/image.png){width=437 height=263}
+
+- **Scenarios**: Muliple scenarios exist for both 2025 and 2030 across both the capacity expansion and production cost modules of PLEXOS. For the capacity expansion, the model looks at the least-cost expansion of DERs for addressing the power deficit in Ukraine due to the loss of generation capacity across 2023 and 2024, with sensitivities around the policy and regulation that can enable certain DER technologies. Meanwhile in 2030, a similar approach is taken however with the inclusion of a broader set of technologies and adding sensitivities on the recovery of both generation and demand. All models were then run in PCM to assess how the systems operate across the entire year to provide detailed information around costs, operations and system adequacy.
+
+![Slide1](uploads/5beb9e3e0cc0b6d27580b888f5489cf2/Slide1.jpg)
+
+
+- **Generation**: Capacities come from data collected by a consultant (SEEPX) which contained information on technologies, fuels, heat rates, technical capabilities, plant age, etc as well as damage assessment (when available) and regional capacity as of July/August 2023. This was based on multiple data sources, including DTEK, the Ministry of Energy and public domain sources. Unfortunately, the exact sources are not provided by the consultant and there is an inconsistent level of detail across different generators (e.g. DTEK plants have very detailed information, others don't). The renewable generation capacity was also incomplete and had to be complemented by data from other sources including the Ministry of Energy itself and National Plan for RE (all of which are in the Data folder). In the case when only a national aggregate was given, this was split regionally according to existing capacities. In terms of damaged capacities, this was rather incomplete from SEEPX's data collection, and was updated with the use of a number of reports including the UNDP and KSE damage assessment reports and the Greenpeace Solar Marshall Plan (all can be found in the project folder under *Resources*. 
+
+- **Demand**: The demand profile comes from the Ukrenergo national demand, which was obtained from the IEA DW for hourly data from 2015 to September 2022. 
+
+
 - **Transmission**: capacities were originally based on information
   provided by a state grid secondee in WEO in 2018. For years further
   into the future we either undertook some transmission expansion in
