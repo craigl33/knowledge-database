@@ -34,4 +34,25 @@ Unlike the majority of RISE PLEXOS models, which are almost exclusively producti
 
 The capacity expansion planning is done in snapshots for both 2025 and 2030. This means that its not a comprehensive capacity expansion plan, which usually would model a 20year horizon and result in a build out based on demand growth, generation retirements and cost dynamics over that horizon. In this case, the assumption is that the snapshot year would continue for perpetuity, across the lifetime of all new investments.
 
-Important inputs are build costs and financial inputs which are all summarised in the Technical Annex.  Also please look at appropriate material in PLEXOS on LT Plan within the Help File (press F1) or training material. Important settings include the performance object (which generally needs more time so a higher max time for solving a step, which in general is an entire year but also can have a higher MIP relative gap), the LT Plan object and others. In general, the capacity expansion plan done in RISE models was linear for capacity expansion but mixed integer for production. Refer to the setting objects for LT models for more information!  
+Important inputs are build costs and financial inputs which are all summarised in the Technical Annex. Also please look at appropriate material in PLEXOS on LT Plan within the Help File (press F1) or training material.
+
+Important settings include the Performance object (which generally needs more time so a higher max time for solving a step, which in general is an entire year but also can have a higher MIP relative gap), the LT Plan object and others. As a summary, the following LT settings from the Ukraine-2023 model (as used in the LT_Sampled_3DaysPerMonth_UC object) are highlighted to bring them to your attention. Please see Help File or Trainings for more information:
+
+* Chronology = Sampled, using 3 sample days per month: Approximates load by 3 sampled days, ensuring that both energy and max demand are preserved. The more days the more accurate, but the longer the simulation run time. Generally a number of different settings are tested to see which would be a good middle ground
+* Expansion decisions integer optimality = Linear: Expansion can build non-integer number of units. In general, for VRE or BESS (which are scaleable) this is not a big deal. However for large-scale units this may need to be changed. One can control \[Expansion optimality\] on the generators themselves if mixing the two types. Integer decisions can make it much longer to solve, so again this boils down to trade-offs
+* Co-optimise unit commitment: ensures that the UC is co-optimised with the expansion to ensure that least-cost decisions are taken that account for UC constraints. In reality, I am unsure exactly how this setting works, but it makes a huge difference in reducing USE that arises in the ST Schedule runs that are made after LT Plan
+* Effective load approach: The basic premise behind the Effective Load Approach is to take the load and appropriately modify it with respect to the convolved capacity outages. It transposes the convolved generators forced outage rates into the LDC, effectively modifying the load to account for the capacity outages
+
+For the expansion, a number of generic constraints were setup to ensure a fixed regional distribution of different technologies (e.g. wind, solar, rooftop solar). These could be informed by demand (for e.g. this is used for rooftop solar PV) or by the Site Selection tool, in an interative process (or based on certain tranches of capacity). In the Ukraine model, the several ratio constraints - regional ratio per technology, technology ratioes (e.g. wind to solar, roofttop to utility-scale) - were setup. These can be viewed from the Main models (as designated in the model). 
+
+**Finally**, the actual ST Schedule runs are not performed in sequential runs (i.e. via one PLEXOS model with LT, MT and ST all included). Instead, the LT Plan models are run, and then processed using the solution-files-processing function (as below). This adds 5% additional capacity across all technologies to account for the usually under-capacity representation when using sampled chronology that misses things like low VRE periods and/or periods of high maintenance/high outages. These are otuput to a specific location in the InputData folder for ExpUnits. **NOTE:** These are put in a \\NEW\\ folder to avoid unwanted overwriting.
+
+```python
+sfp.plots.extract_plexos_LT_results(config, scale=1.05)
+```
+
+This can be equally paired with the SFP functionality for a quick summary of LT results, saving time for checking results from LT Plan before commiting to hours of ST Schedule runs. This functionality is allowed by including the config.QUICK_PLOTS variables, which are chosen to use only results processed from annual summary plots (including that from LT Plan).
+
+```python
+sfp.plots.create_plot_2_summary(config, plot_vars=config.QUICK_PLOTS, plot_name='quick')
+```
