@@ -14,7 +14,7 @@
 
 - Muliple scenarios exist for both 2025 and 2030 across both the capacity expansion and production cost modules of PLEXOS. For the capacity expansion, the model looks at the least-cost expansion of DERs for addressing the power deficit in Ukraine due to the loss of generation capacity across 2023 and 2024, with sensitivities around the policy and regulation that can enable certain DER technologies. Meanwhile in 2030, a similar approach is taken however with the inclusion of a broader set of technologies and adding sensitivities on the recovery of both generation and demand. All models were then run in PCM to assess how the systems operate across the entire year to provide detailed information around costs, operations and system adequacy.
 
-![Slide1](uploads/5beb9e3e0cc0b6d27580b888f5489cf2/Slide1.jpg)
+![Slide1](uploads/5beb9e3e0cc0b6d27580b888f5489cf2/Slide1.jpg){width=662 height=372}
 
 ##### **Generation**
 
