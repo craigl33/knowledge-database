@@ -28,6 +28,22 @@
   - [Launch slides](https://ieaorg.sharepoint.com/:p:/s/IEA-Ukraine/ESCZNZFgVA9Bjt7nHOh6JDgBCrdNjRJALvv1-trLJd0DZA)
   - Generator parameters sheet (Y:/Modelling\\Ukraine\\2023_UKR_ST_Security\\01_Data\\01_Generation\\20241113_generator_parameters_UKR.xlsx)
 
+# **PLEXOS model scenarios**
+
+The latest PLEXOS model for this project is UKR_Base_Model_v7.5_Roadmap_final.xml. The model has been cleaned up to delete most unwanted Model objects, with the remaining ones (including some unused sensitivities) included in appropriately named folders/categories. The main models are the following:
+
+* UKR_Validation: Contains 2021 and 2024 (war-time) validations. Alternative wartime validation scenarios for 2023 can be found in the UKR_War_Scenario folder. Note that due to complications with side-by-side analysis with a leap year (**so a shortcoming of SFP!**), the 2024 validation uses 2023 as the year for this scenario (inputs for 2023 and 2024 demand are anyway assumed to be the same)
+* UKR_CapExp_Runs\_{year}: CapExp runs and senstivities as used in the final runs. 
+* UKR_Main\_{year}\_Scenarios: ST runs relating to each CapExp run, with certain senstitvities included. Sensitivies are mostly easily viewed via the Model/Scenario grid.
+
+The remaining models are all test runs, and may play with certain other sensitivities that could be useful for future work.
+
+**Note the nomenclature for model runs can be interpreted as follows:**
+
+* e = expansion, where the letter following it corresponds to the technologies included. G=gas turbines/engines, S= solar+BTM battery, So = solar only,  Sc=constrained solar expansion (so based on limited supply chains or construction labour, etc), W=wind, B=utility-scale battery, Ba = constrained utility-scale batteries (1.5GW in 2025). The subscript **f** (e.g. Gf) denotes a fixed amount of that technology (e.g. fixed gas expansion) based on another scenario (e.g. 2025 case for all technologies would be used to determine the minimum amount of gas as seen in 2030). Note this Gf sensitivity wasnt used in the final runs. 
+* CO2 = CO2 price included, Td = damaged transmission, Ix = expanded IC with EU, Rn = no repairs ahead of 2024/25 heating season (i.e. the same capacity as 2024), Ro = optimal 2025 capacity with all repairs remaining in operation (i.e 3GW thermal capacity), base 2025 scenario assumes only 1.5GW remains in operation at any one given time. 
+* nBTo = no system optimisation of BTM batteries (see the representation of BTM BESS in the section on DERs below), ASb = batteries contribute to AS (note this didnt operate as expected, and batteries didnt provide reserves
+
 # **Capacity expansion model**
 
 Unlike the majority of RISE PLEXOS models, which are almost exclusively production cost models (with the exception of the latest Thailand model and the Indonesia model, both of which use capacity expansion planning in a more limited manner), capacity expansion planning is central to the project model. The Corporate Procurement project models also use it extensively.
@@ -43,7 +59,7 @@ Important settings include the Performance object (which generally needs more ti
 * Co-optimise unit commitment: ensures that the UC is co-optimised with the expansion to ensure that least-cost decisions are taken that account for UC constraints. In reality, I am unsure exactly how this setting works, but it makes a huge difference in reducing USE that arises in the ST Schedule runs that are made after LT Plan
 * Effective load approach: The basic premise behind the Effective Load Approach is to take the load and appropriately modify it with respect to the convolved capacity outages. It transposes the convolved generators forced outage rates into the LDC, effectively modifying the load to account for the capacity outages
 
-For the expansion, a number of generic constraints were setup to ensure a fixed regional distribution of different technologies (e.g. wind, solar, rooftop solar). These could be informed by demand (for e.g. this is used for rooftop solar PV) or by the Site Selection tool, in an interative process (or based on certain tranches of capacity). In the Ukraine model, the several ratio constraints - regional ratio per technology, technology ratioes (e.g. wind to solar, roofttop to utility-scale) - were setup. These can be viewed from the Main models (as designated in the model). 
+For the expansion, a number of generic constraints were setup to ensure a fixed regional distribution of different technologies (e.g. wind, solar, rooftop solar). These could be informed by demand (for e.g. this is used for rooftop solar PV) or by the Site Selection tool, in an interative process (or based on certain tranches of capacity). In the Ukraine model, the several ratio constraints - regional ratio per technology, technology ratioes (e.g. wind to solar, roofttop to utility-scale) - were setup. These can be viewed from the Main models (as designated in the model).
 
 **Finally**, the actual ST Schedule runs are not performed in sequential runs (i.e. via one PLEXOS model with LT, MT and ST all included). Instead, the LT Plan models are run, and then processed using the solution-files-processing function (as below). This adds 5% additional capacity across all technologies to account for the usually under-capacity representation when using sampled chronology that misses things like low VRE periods and/or periods of high maintenance/high outages. These are otuput to a specific location in the InputData folder for ExpUnits. **NOTE:** These are put in a \\NEW\\ folder to avoid unwanted overwriting.
 
@@ -56,3 +72,19 @@ This can be equally paired with the SFP functionality for a quick summary of LT 
 ```python
 sfp.plots.create_plot_2_summary(config, plot_vars=config.QUICK_PLOTS, plot_name='quick')
 ```
+
+# **DER representation in the model**
+
+With the model focus on DERs, this model was a test bed for new functionality in exploring the necessary regulation and market design to enable different DERs based on, for example, their ability to be controlled by TSOs or their ability to participate in AS markets.
+
+For example, BTM batteries are explicitly included in the model. Although these are specifically community-scale batteries (which are assumed to be also batteries that could be deployed in industry), this really only had a bearing on the costs of these batteries (e.g. BTM batteries at residential level would be considerably higher while also harder to incentivise their reduction in peak consumption).
+
+BTM batteries are implemented through a constraint on their load, which is \<= capacity factor of rooftop PV production in the region. This ensures that their implementation looks only at the ability to charge on production co-located with rooftop PV. Their operation, is also limited to discharge only during evening peak hours (18h-22h), to represent some sort of incentive for peak consumption reduction. 
+
+Finally, the DERs are also limited in their ability to provide towards different reserves (spinning and regulating). These are also controlled through different senstitivies, though on final runs I found that their implementation was incorrect and batteries (in this case, utility-scale) didnt provide towards spinning reserves at all.  In the end, it didnt have a huge bearing on this model specifically as BESS was built for arbirtrage and peaking capacity needs while 1.4GW of PSH (1.7GW in 2030 after repairs to the damaged PSH unit)was able to provide towards the 1GW (based on the largest nuclear unit) spinning reserve requirements. 
+
+###### Energy and service contributions of different technologies under different pathways to meet immediate system needs, 2021 vs. 2025
+
+![image.png](uploads/ec2bf0949be0463d8c16933434cc66d7/image.png){width=437 height=195}
+
+However, as reserve requirments increase with RE (due to regulating reserves), this would certainly need to be fixed and verified in future implementations of this. For example, in the services figure (seen below), only spinning reserves were analysed. **However, if looking also at balancing/regulating reserves, BESS could contribute a significant amount of this capacity which would otherwise be unrepresented**
