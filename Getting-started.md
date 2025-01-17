@@ -1,5 +1,7 @@
 # **Model guide**
 
+[[_TOC_]]
+
 This section aims to provide introductory information mainly for modellers to get started, but can also be useful for all team members working on projects with modelling to understand the setup and where to find things. The section includes:
 
 - Getting started page with how to get connected to all the modelling resources including code in GitLab, mapping information for all the drives we use for modelling and data storage, and a list of locations that might be needed/useful.
