@@ -14,7 +14,7 @@ All data can be found at the Y: (\\\\vfilermc1\\EMS\\) drive here: Y:\\Modelling
 
 Report: https://www.iea.org/reports/enhancing-indonesias-power-system
 
-##### **Data sources** 
+##### **Data sources**
 
 * The modelling of the power systems in Java-Bali and Sumatra is predominantly based on data requested and received from Indonesian stakeholders (the MEMR and PLN) with key information on the different components of the power system. In the absence of specific data for either Indonesia or a specific component of the power system, either public domain information or assumptions based on best-practice were made to allow for completeness of the model.
 
@@ -178,7 +178,7 @@ Report: https://www.iea.org/reports/enhancing-indonesias-power-system
 
 **Generation**
 
-The generation mix in Java in 2025 is based on the planned retirements and new builds from the [RUPTL 2021](https://gatrik.esdm.go.id/assets/uploads/download_index/files/38622-ruptl-pln-2021-2030.pdf). All plants (existing and future) are consolidated in the IDN_Plant_level tab found in the generator capacity/parameters workbook. 
+The generation mix in Java in 2025 is based on the planned retirements and new builds from the [RUPTL 2021](https://gatrik.esdm.go.id/assets/uploads/download_index/files/38622-ruptl-pln-2021-2030.pdf). All plants (existing and future) are consolidated in the IDN_Plant_level tab found in the generator capacity/parameters workbook.
 
 In addition to the standard parameters, several specific features were used for this model and in the data collected:
 
@@ -214,7 +214,7 @@ The daily use of electric cooking is based on a recorded use of rice cookers in 
 
 ##### Transmission
 
- Inter-regional transmission lines between the modelled regions (i.e. control regions in Java-Bali and the North/South of Sumatra are considered, however only in terms of their transfer capacity. The export/import limits of these lines are based on assumed values of power capacity considering the voltage level and configuration of lines. Transmission expansion between 2019 and 2025 is assumed based on RUPTL.
+Inter-regional transmission lines between the modelled regions (i.e. control regions in Java-Bali and the North/South of Sumatra are considered, however only in terms of their transfer capacity. The export/import limits of these lines are based on assumed values of power capacity considering the voltage level and configuration of lines. Transmission expansion between 2019 and 2025 is assumed based on RUPTL.
 
 # **Indonesia NZE roadmap model**
 
@@ -225,30 +225,27 @@ The daily use of electric cooking is based on a recorded use of rice cookers in 
 * A WEO-style model with 5 regions for each main island group (Java-Bali, Sumatra, Kalimantan, Sulawesi and Maluku-Papua-Nesa Tanggura). While these islands also consist of smaller islands (and with MPN, it is a collection of many), it is assumed that these regions have a copper-plate internally
 * 
 
-##### **Scenarios**: 
+##### **Scenarios**:
 
 * The model consists of two different capacity scenarios (STEPS and APS) and two different years (2035 and 2050), with these inputs coming directly from the WEO. Additionally, a capacity expansion model was used to address
 
-##### **Generation**: 
+##### **Generation**:
 
 * Capacities come directly from WEO, with this working being done directly in parallel with their own modelling work. Only power plant capacity was provided, with their ability to assess system flexibility being limited at the time. This meant that our model was required to provide key inputs of the necessary battery capacity (including composition of different duration storage) to operate reliabily.
-* Generation capacity numbers are found in the "NZE_Exp_by_Reg" tab, having come from the WEO data provided directly. 
+* Generation capacity numbers are found in the "NZE_Exp_by_Reg" tab, having come from the WEO data provided directly.
 * The regional split of generation capacity technologies across these 5-regions for conventional technologies is based on analysis of existing and future generation capacities in these regions (considering the RUPTL) - see "NZE_Regional_Split" tab. VRE was based on the site selection methodology detailed below.
 
-##### **Demand**: 
+##### **Demand**:
 
 * The demand profile comes from the WEO, containing the bottom up end use disaggregation. The regional demand disaggregation was based on RUKN demand projections which came directly from MEMR as part of our data collection, thanks to the IPSE work.
 
-##### **Transmission**: 
+##### **Transmission**:
 
 * As a very spread out islanded system, there is currently no interconnection of the different modelled regions, though there were at the time of the modelling, plans to build a 1GW IC between JVB and Sumatra. Therefore, this was assumed to be in service for our models. For the remaining transmission, this was based on model results from capacity expansion planning which allowed the model to find an optimal mix of new transmission (HVDC undersea cables) and batteries. New transmission, besides the 1GW JVB-SUM link, was deeemd to not be feasible by 2030, and only included in 2050.![image.png](uploads/cf2f88fd8b09aa0ac04602a699af6a6b/image.png)
 
 ##### **VRE profiles**:
 
-* VRE profiles were based fully on ERA5 data using the RISE-developed site selection and profile construction metodology (the precursor to the gis-script). The exacty methodology is detailed in the report as it formed a chapter which analysed the technical potential. 
-* In the case of the split of VRE per region/island, this was based on  the **DEA RE pipeline (**seeVRE_by_ISL tab**).** In the case where the technical potential of JVB is fully realised (this happens in 2050), this capacity was reassigned to Sumatra or Kalimantan.
-* ![image.png](uploads/e9d3cc9ed283a5d00f2f6b52dde08e54/image.png)
+* VRE profiles were based fully on ERA5 data using the RISE-developed site selection and profile construction metodology (the precursor to the gis-script). The exacty methodology is detailed in the report as it formed a chapter which analysed the technical potential.
+* In the case of the split of VRE per region/island, this was based on the **DEA RE pipeline (**see **VRE_by_ISL** tab**).** In the 2050 scenario, this split however exceeds the technical potential in JVB, in which case the methodology allowed for the this to be reassigned to Sumatra's capacity. The expansion of transmission between islands is key for this system to work.
 
-# 
-
- 
+  ![image.png](uploads/e9d3cc9ed283a5d00f2f6b52dde08e54/image.png){width=589 height=577}
