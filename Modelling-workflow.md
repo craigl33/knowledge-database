@@ -38,6 +38,8 @@ As a result, in general, we model power systems with a very high-level represent
 
 Lines are modelled as pipelines between these regions. Ideally, there would be information on the existing or planned transfer capacity of different transmission corrdidors. In the absence of detailed information around transmission capacity between regions, this has been assumed based on the physical transmission network, assuming the Surge Impedance Loading (SIL) of different lines based on their voltage level. The topology of the transmission network would either be based on direct information from stakeholders or on open-source information such as OpenStreetMaps (which can be analysed visually or using geospatial analysis).
 
+Older versions of this methology can be found in the Data/Transmission folders of projects such as China, Thailand and Indonesia.
+
 Note that this part of the model set-up has typically been done manually.
 
 ## Demand
