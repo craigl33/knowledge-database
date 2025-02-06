@@ -4,6 +4,8 @@ Also see the [Get Started](https://python.iea.org/doc/getting-started/index.html
 
 All parts have vital tips for efficient coding and workflow.
 
+[[_TOC_]]
+
 # Wiki
 
 - [Home (this page)](home)
@@ -24,6 +26,7 @@ All parts have vital tips for efficient coding and workflow.
 
 - [Getting started](/Getting-started)
 - [Modelling overview](/Modelling-overview)
+- [Modelling workflow](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Modelling-workflow)
 - [Procedure summaries for modellers](/Procedure-summaries-for-modellers)
 
 ### Models
