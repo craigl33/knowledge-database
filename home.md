@@ -1,42 +1,53 @@
-This is the general knowledge database, relevant for all repositorys within the rise-iea organization on GitHub. It contains general information about the project structure, setup, and version control. For more specific information about the individual repositorys, see the README file (documentation) in the respective repository. This can be also linked to in other projects, for more general information.
+
+[[_TOC_]]
+
+# Knowledge Database Wiki
+
+Welcome to the Knowledge Database Wiki. This central repository contains all documentation, guides, and resources for our modeling projects.
+
+This is the general knowledge database, relevant for all repositorys within the rise-iea organization on GirLab. It contains general information about the project structure, setup, and version control. For more specific information about the individual repositorys, see the README file (documentation) in the respective repository. This can be also linked to in other projects, for more general information.
 
 Also see the [Get Started](https://python.iea.org/doc/getting-started/index.html) documentation from ISU, on general setup things (conda, gitlab, datawarehouse etc). Maybe even the [ieacore](https://python.iea.org/doc/ieacore/latest/) documentation, but right now the package is not relevant.
 
 All parts have vital tips for efficient coding and workflow.
 
-[[_TOC_]]
+## Getting Started
 
-# Wiki
+- [Getting Started Guide](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Getting-started)
+- [Python Setup](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Python-setup)
 
-- [Home (this page)](home)
+## Modelling Resources
 
-## GitLab, coding
+- [Modelling Overview](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Modelling-overview)
+- [Modelling Guide](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Modelling-guide)
+- [Modelling Workflow](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Modelling-workflow)
+- [Procedure Summaries](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Procedure-summaries-for-modellers)
 
-- [Coding best practice](Coding-best-practice) (code quality, linter)
-- [Python setup](/Python-setup) (install packages, IDE, virtual env, set up project folders)
-- [Conda Cheat Sheet](/Conda-Cheat-Sheet)
-- [Version Control (Git)](Version-Control-(Git)) (general intro to git)
-  - [**First-time connection to GitLab**](Version-Control-(Git)#initial-gitlab-connection)
-  - [Git Cheat Sheet](Git-Cheat-Sheet)
-  - [Move a repo from GitHub to GitLab](Move-a-repo-from-GitHub-to-GitLab)
+## Country Models
 
-## RISE modelling
+### Asia
 
-### Guidance
+- [China Model](china-model)
+- [India Model](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/India-model)
+  - [Gujarat Model](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Gujarat,-India-model)
+- [Indonesia Model](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Indonesia-model)
+- [Korea Model](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Korea-model)
+- [Thailand Model](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Thailand-model)
 
-- [Getting started](/Getting-started)
-- [Modelling overview](/Modelling-overview)
-- [Modelling workflow](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Modelling-workflow)
-- [Procedure summaries for modellers](/Procedure-summaries-for-modellers)
+### Europe
 
-### Models
+- [Ukraine Model](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Ukraine-model)
 
-- [Ukraine](/Ukraine-model)
-- [China](/China-model)
-- [Korea](/Korea-model)
-- [India](/India-model)
-- [Gujarat, India](/Gujarat,-India-model)
-- [Indonesia](/Indonesia-model)
-- [Thailand](/Thailand-model)
+## Development Resources
+
+### Code & Version Control
+
+- [Coding Best Practices](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Coding-best-practice)
+- [Version Control (Git)](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Version-Control-(Git))
+- [Git Cheat Sheet](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Git-Cheat-Sheet)
+- [Conda Cheat Sheet](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Conda-Cheat-Sheet)
+- [Moving from GitHub to GitLab](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Move-a-repo-from-GitHub-to-GitLab)
+
+---
 
 If any new information is added, please also add it to the content list above. This makes it easier to find relevant information.
