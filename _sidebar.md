@@ -4,7 +4,6 @@
   - [Python Setup](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Python-setup)
 - Modelling
   - [Modelling Overview](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Modelling-overview)
-  - [Modelling Guide](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Modelling-guide)
   - [Modelling Workflow](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Modelling-workflow)
   - [Procedure Summaries](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Procedure-summaries-for-modellers)
 - Country Models
