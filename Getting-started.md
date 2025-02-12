@@ -1,4 +1,4 @@
-# **Model guide**
+# **Guide for basic setup** 
 
 [[_TOC_]]
 
