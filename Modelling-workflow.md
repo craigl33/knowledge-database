@@ -40,9 +40,9 @@ For plant-level data (i.e. for country-level generation parameters) these should
 2. Copy the base model file to use as a basis into the 03_Modelling folder and give it a new name
 3. Create the '01_InputData' folder inside the 03_Modelling folder to eventually contain the PLEXOS input files
 4. Start collecting the main inputs as needed by the [plexos-model-setup](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup) package. Please see its documentation for more info but in summary:
-   * For a WEO model: 
+   * For a WEO model:
      * Use [plexos-model-setup](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup) to create the plant list with capacities from the Data Warehouse (DW).
-     * This will need the data to be requested and uploaded to a specific part of the DW for RISE data. 
+     * This will need the data to be requested and uploaded to a specific part of the DW for RISE data.
      * Note that the current data only represents a subset of the full data available from WEO on the DW (also see dw_variables_full.xlsx in the [templates and indices](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup/-/tree/main/templates%20and%20indices?ref_type=heads) folder of [plexos-model-setup](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup)
    * For a non-WEO model:
      - A generator_capacity workbook and a tab housing a list of generators with regional and technological information. If plant-level technical data (e.g. HR) is also provided this can also be added. A simple template can be found in the [templates and indices](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup/-/tree/main/templates%20and%20indices?ref_type=heads) folder of [plexos-model-setup](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup). This is based on the generator_capacity_summary workbook (AllGenerators tab) from the Ukraine_ST_Security (2024) project
@@ -50,11 +50,10 @@ For plant-level data (i.e. for country-level generation parameters) these should
    * Using the generator_parameters.xlsx template from plexos-model-setup as starting point, check the individual parameters tabs and replace any values for which you have region specific data or where you think it's appropriate to change the assumptions for your analysis (may stay the same for some model updates) and save in an appropriate location
    * Looking at the Indices tab of the generator_parameters.xlsx, check that that values are present and look reasonable for each property for all technologies that should have that property. You can also visualise these from the plexos-model-setup package.
    * Similarly, update the parameters_index.csv for your project
-5. 
-6. Go into PLEXOS and modify the plant objects in the model to match your plant list. A number of tricks can help with this. But firstly, it is good to start with  an existing model (capturing existing settings etc.) and stripping of all unneeded objects (e.g. Generators, Regions, Nodes, etc.). Depending on if its a WEO model or not, you can the advance in a number of ways:
+5. Go into PLEXOS and modify the plant objects in the model to match your plant list. A number of tricks can help with this. But firstly, it is good to start with an existing model (capturing existing settings etc.) and stripping of all unneeded objects (e.g. Generators, Regions, Nodes, etc.). Depending on if its a WEO model or not, you can the advance in a number of ways:
    - **For a WEO model :**
-     * Where you just need to change the number of regions and their names, you can trim the model down to a single node by deleting all generators, batteries, purchasers **from all but one node**. 
-     * Then you can export the relevant objects from the model to an xml (you need to avoid exporting nodal objects where you didn't delete the other node versions or you will get errors on import due to duplicate IDs) and make a copy for each new node you need to create then use find replace in Notepad++ to change all references to the node name. 
+     * Where you just need to change the number of regions and their names, you can trim the model down to a single node by deleting all generators, batteries, purchasers **from all but one node**.
+     * Then you can export the relevant objects from the model to an xml (you need to avoid exporting nodal objects where you didn't delete the other node versions or you will get errors on import due to duplicate IDs) and make a copy for each new node you need to create then use find replace in Notepad++ to change all references to the node name.
      * You can then import all the nodes back into the model.
    - **For a non-WEO model:**
      * For cases where you need to create totally new plant names for non-WEO models, its a bit trickier. It will involve multiple steps which should be done methodically.
@@ -68,11 +67,11 @@ For plant-level data (i.e. for country-level generation parameters) these should
      * By copying and pasting the generator properties (see below), these can be added to a template file which matches on the technology grouping. Then a simple script can loop through all generators and create a CSV file that holds all the generator proeprties and that can be pasted in
      * ![image.png](uploads/9f5401b4e87318e756f079dc8589ffda/image.png)
      * Note above how to properly isolate the generator properties below by selecting the parts in the red boxes properly and selecting all properties when copying.
-     * When pasting back in, you should select "Generators"  so that the columns in the property viewer where ypou paste in the properties matches what you copied into the template.
+     * When pasting back in, you should select "Generators" so that the columns in the property viewer where ypou paste in the properties matches what you copied into the template.
 
        ![image.png](uploads/a3b8649c2669379c0b3fb6afeb242706/image.png)
      * ANY properties which use the "×" Expression with a variable (e.g. to scale a property) should be replaced with a normal "x" to avoid encoding errors
-     * Unfortunately example scripts  been lost, but properties as used for the Ukraine 2024 project can be found in [templates and indices](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup/-/tree/main/templates%20and%20indices?ref_type=heads) folder of [plexos-model-setup](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup) - gen_props_template.csv and gen_props_expansion_template.csv
+     * Unfortunately example scripts been lost, but properties as used for the Ukraine 2024 project can be found in [templates and indices](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup/-/tree/main/templates%20and%20indices?ref_type=heads) folder of [plexos-model-setup](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup) - gen_props_template.csv and gen_props_expansion_template.csv
 
 ##  VRE generation
 
@@ -105,7 +104,7 @@ Lines are modelled as pipelines between these regions. Ideally, there would be i
 
 Older versions of this methology can be found in the Data/Transmission folders of projects such as China, Thailand and Indonesia.
 
-Some functionality has been added to [plexos-model-setup](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup) to allow a setup of existing corridors if using cleaned OpenStreetMap data. Currently, this has been done by using cleaned data from [OpenInfraMap](https://openinframap.org/#2/26/12) (downloaded for Ukraine), though this data is now sold. 
+Some functionality has been added to [plexos-model-setup](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup) to allow a setup of existing corridors if using cleaned OpenStreetMap data. Currently, this has been done by using cleaned data from [OpenInfraMap](https://openinframap.org/#2/26/12) (downloaded for Ukraine), though this data is now sold.
 
 ## Demand
 
@@ -135,7 +134,7 @@ In cases where only existing demand is provided, there will also be an additiona
 
 1. Currently, a part of the [plexos-model-setup](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup) is under development, but effectively as this would not consist of demand by end-use (as per WEO), this could be done manually.
 2. If adding in some DSM functionality (as an example), one can copy and paste the load-shifting objects from WEO-style models and define demand separately.
-3. For future demand projections using a base profile, we have typically used the Load Froecasting tool from PLEXOS using Annual Energy/Peak Demand 
+3. For future demand projections using a base profile, we have typically used the Load Froecasting tool from PLEXOS using Annual Energy/Peak Demand
 4. An example PLEXOS model for this can be found in the [templates and indices](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup/-/tree/main/templates%20and%20indices?ref_type=heads) folder of [plexos-model-setup](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup) - profile_forecasting_example
 5. Other, better methodlogies may be available and should be explored!
 
@@ -165,6 +164,6 @@ You should start by pulling the [solution-file-processing](https://gitlab.iea.or
 
 You will need to have the solution files for analysis saved in a folder inside 03_SolutionFIles and then you can use the run script to create outputs inside 06_DataProcessing.
 
-Note that certain  config file inputs in the [solution-file-processing](https://gitlab.iea.org/iea/ems/rise/solution-file-processing) and [plexos-model-setup](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup) TOML files or templates/indices names, etc. will need to be consistent.
+Note that certain config file inputs in the [solution-file-processing](https://gitlab.iea.org/iea/ems/rise/solution-file-processing) and [plexos-model-setup](https://gitlab.iea.org/iea/ems/rise/plexos-model-setup) TOML files or templates/indices names, etc. will need to be consistent.
 
  
