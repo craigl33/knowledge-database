@@ -27,8 +27,12 @@
 | Public domain or IEA data/analysis | •Wind & solar time series for representative locations for the future scenarios. |  |  |
 | Global data assumed | •Key operating characteristics of generating plants: ramp rates, min/max generation, average heat rate of future plants, min up/down times |  |  |
 
-- **Modelling**:
-  - Capacity expansion, whereby the optimal amount of VRE and flexibility options(inter-regional grid reinforcement, storage) are found in order to meet Thailand’s emissions targets in the modelled years.
+- **Modelling highlights**:
+  - Capacity expansion, whereby the optimal amount of VRE and flexibility options (inter-regional grid reinforcement, storage) are found in order to meet Thailand’s emissions targets in the modelled years.
+  - Emissions targets for the power sector allowed for a CO2 constraint to be enforced for teh capacity expansion and allowed for the required VRE deployment to acheive this target to be found.
+  - In the model, a the regional- and technological mix was forced based on collected data:
+    * Regional split was based on information from the latest PDP at the time ( PDP2018.1)
+    * Technological split was similarly imposed
   - Production cost model, to explore the flexibility requirements around increased VRE production and the benefits of different flexibility options. This model is deterministic, using only a single weather year and a single set of outage patterns for generators. It is therefore unable to appropriately assess system adequacy
 
 # **Latest project summary**
@@ -38,6 +42,7 @@
   - Report: [Thailand’s Clean Electricity Transition](https://www.iea.org/reports/thailands-clean-electricity-transition)
   - Presentations:
   - Locations and files:
+- 
 
  
 
