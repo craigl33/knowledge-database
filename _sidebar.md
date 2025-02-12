@@ -1,12 +1,30 @@
 - [Home](home)
-- [Sidebar](_sidebar)
+- [Sidebar](\_sidebar)
 
 ---
 
-- Best Practises
-  - [Code-Quality](best-practices/Code-Quality)
-- [Version Control (Git)](git/Version-Control-(Git))
-  - [Git Cheat Sheet](git/Git-Cheat-Sheet)
-  - [Connect to GitLab](git/Connect-to-GitLab)
-- [Setup](setup/Setup)
-  - [Conda Cheat Sheet](setup/Conda-Cheat-Sheet)
+```markdown
+- [Home](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/home)
+- Getting Started
+  - [Getting Started Guide](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Getting-started)
+  - [Python Setup](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Python-setup)
+- Modelling
+  - [Modelling Overview](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Modelling-overview)
+  - [Modelling Guide](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Modelling-guide)
+  - [Modelling Workflow](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Modelling-workflow)
+  - [Procedure Summaries](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Procedure-summaries-for-modellers)
+- Country Models
+  - [China](china-model)
+  - [India](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/India-model)
+    - [Gujarat](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Gujarat,-India-model)
+  - [Indonesia](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Indonesia-model)
+  - [Korea](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Korea-model)
+  - [Thailand](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Thailand-model)
+  - [Ukraine](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Ukraine-model)
+- Development Resources
+  - [Coding Best Practices](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Coding-best-practice)
+  - [Version Control (Git)](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Version-Control-(Git))
+  - [Git Cheat Sheet](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Git-Cheat-Sheet)
+  - [Conda Cheat Sheet](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Conda-Cheat-Sheet)
+  - [Moving from GitHub to GitLab](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Move-a-repo-from-GitHub-to-GitLab)
+```
