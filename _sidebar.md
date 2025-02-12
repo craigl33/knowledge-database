@@ -1,9 +1,3 @@
-- [Home](home)
-- [Sidebar](\_sidebar)
-
----
-
-```markdown
 - [Home](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/home)
 - Getting Started
   - [Getting Started Guide](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Getting-started)
@@ -27,4 +21,3 @@
   - [Git Cheat Sheet](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Git-Cheat-Sheet)
   - [Conda Cheat Sheet](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Conda-Cheat-Sheet)
   - [Moving from GitHub to GitLab](https://gitlab.iea.org/iea/ems/rise/knowledge-database/-/wikis/Move-a-repo-from-GitHub-to-GitLab)
-```
